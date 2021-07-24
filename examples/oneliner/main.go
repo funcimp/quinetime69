@@ -1,0 +1,1 @@
+package main;func main(){y:="\x60";print(x,y,x,y)};var x=`package main;func main(){y:="\x60";print(x,y,x,y)};var x=`
