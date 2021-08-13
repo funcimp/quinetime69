@@ -1,3 +1,4 @@
+// an unsavory quine by funcimp.biz
 package main
 
 import "fmt"
@@ -9,10 +10,11 @@ func main() {
 }
 
 func self() {
-	fmt.Printf("%v\n\nconst program = \u0060%v\u0060\n", program, program)
+	fmt.Printf("%s\n\nconst s = \x60%s\x60\n", s, s)
 }
 
-const program = `package main
+const s = `// an unsavory quine by funcimp.biz
+package main
 
 import "fmt"
 
@@ -23,5 +25,5 @@ func main() {
 }
 
 func self() {
-	fmt.Printf("%v\n\nconst program = \u0060%v\u0060\n", program, program)
+	fmt.Printf("%s\n\nconst s = \x60%s\x60\n", s, s)
 }`
