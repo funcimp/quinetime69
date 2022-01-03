@@ -1,28 +1,15 @@
 package main
 
 import (
+	_ "embed"
 	"fmt"
 )
 
-const head string = `package main
+//go:embed head.txt
+var head string
 
-import "fmt"
-
-var s = []string{`
-
-const body string = `
-}
-
-func main() {
-	fmt.Printf("package main\n\nimport \"fmt\"\n\nvar s = []string{\n")
-	var o string
-	for _, v := range s {
-		fmt.Printf("\t%q,\n", v)
-		o = o + v
-	}
-	fmt.Printf("%v", o)
-}
-`
+//go:embed body.txt
+var body string
 
 func main() {
 	fmt.Printf("%s", head)

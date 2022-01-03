@@ -1,0 +1,12 @@
+
+}
+
+func main() {
+	fmt.Printf("package main\n\nimport \"fmt\"\n\nvar s = []string{\n")
+	var o string
+	for _, v := range s {
+		fmt.Printf("\t%q,\n", v)
+		o = o + v
+	}
+	fmt.Printf("%v", o)
+}
